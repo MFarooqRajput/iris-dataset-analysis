@@ -3,7 +3,7 @@ from dash.dependencies import Input, Output
 from dash import dash_table
 import plotly.express as px
 from layouts import dashboard
-from data import *
+from data import df, opts1, opts3
 
 # defines callback to the dashboard
 @app.callback(Output('page-content', 'children'),

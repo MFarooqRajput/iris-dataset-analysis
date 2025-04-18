@@ -1,5 +1,12 @@
 import dash
+from dash import Dash
+from typing import List
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets: List[str] = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, suppress_callback_exceptions = True, title = 'Iris Dataset Analysis Uisng Dash', external_stylesheets=external_stylesheets)
+app = Dash(
+    __name__,
+    suppress_callback_exceptions=True,
+    title='Iris Dataset Analysis Using Dash',
+    external_stylesheets=external_stylesheets
+)

@@ -1,7 +1,6 @@
 import plotly.express as px
-from dash import html
-from dash import dcc
-from data import *
+from dash import html, dcc
+from data import df, opts1, opts3
  
 # builds the pie chart
 pie_fig = px.pie(
@@ -14,10 +13,10 @@ pie_fig = px.pie(
 )
 
 # builds the heatmap
-heatmap_fig = px.imshow(df.corr(),
+heatmap_fig = px.imshow(df.drop('Species', axis=1).corr(),
     height = 400,
     color_continuous_scale = px.colors.sequential.Bluyl, 
-    title = 'Coorelation matrix of Iris variables'
+    title = 'Correlation matrix of Iris variables'
 )
 
 #dashboard
